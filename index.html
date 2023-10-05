@@ -2,29 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="style.css"/> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="descrption of my personal website">
-    <title>Personal website</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Contact Form Validation</title>
 </head>
 <body>
-     <div class="nav-menu">
-    <a class="active" href="./index.html">home </a>
-    <a href="./about-us.html">about us</a>
-    <a href="./contact-us.html">contact us</a>
-    <a href="./proudact-us.html"> proudact us</a>
-  </div>
-  <h1 class="one"> these is heading title</h1>
-  <img class="two" src="./iam1.webp" alt="" width="400px" height="400px">
-   <p class="p1">Web development refers to the creating, building, 
-    and maintaining of websites.
-      It includes aspects such as web design, web publishing,
-       web programming,Web development is becoming one of the most in-demand jobs. It ranked 8 in the report of  U.S. News & World Report for Best Technology Jobs in 2018. Because of today’s technology, hospitals and clinics, hotel, resorts, restaurants, and many others have their websites.
-Websites are becoming so popular; they can even be called a “need” in almost every company and business. If you browse the internet, you’ll see millions of different websites, all over the world</p>
-        <p class="p2"> It is the creation of an application that
-        works over the internet i.e. websitesWhen choosing a career path or switching to another, salary is not the only significant factor, but most of us undeniably consider it as well. With thoughts like, “Would it help me pay my bills?” or “Is it enough to provide for my family?”
-
-Web developers’ salary is not cheap. In a Glassdoor report, the average salary of a web developer is $93,402 per year, making it one of the most lucrative jobs in the market. </p>
-        <img class="three" src="./iam3.jpeg" alt="" width="300px" height="300px">
+    <h1>Contact </h1>
+    <form id="contactForm">
+        <div>
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+            <div class="error-message" id="firstNameError"></div>
+        </div>
+        <br> <br>
+        <div>
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+            <div class="error-message" id="lastNameError"></div>
+        </div>
+        <br><br>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <div class="error-message" id="emailError"></div>
+        </div>
+        <br> <br>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            <div class="error" id="passwordError"></div>
+        </div>
+        <br> <br>
+        <button type="submit" id="submitBtn" >Submit</button>
+    </form>
+    <div class="success" id="successMessage"></div>
+    
+    <script src="validation.js"></script>
 </body>
 </html>
